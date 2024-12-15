@@ -1,13 +1,12 @@
 /*Общие натройки и сброс стилей*/
 
 body {
-  background-color: gray;
-}
+  background-color: #ffffff;
+} /*Я для цдобства сверки подкрашивала серым цветом background*/
 
 .header,
 .main,
 .footer {
-  background-color: #ffffff;
   color: #000000;
   font-weight: 400;
   font-size: 20px;
@@ -112,16 +111,18 @@ footer a {
 }
 
 /*Настройки секции cover*/
+
 .cover {
   background-image: url("../images/cover.jpg");
   background-size: cover;
+  background-position: center center;
   padding: 165px 50px 50px;
   color: #ffffff;
   /*position: relative;*/ /*Не пригодилось*/
 }
 
 .gray-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: multiply;
 }
 
@@ -152,13 +153,18 @@ footer a {
 }
 
 .aligned-text_right {
+  padding: 0;
+  margin: 0;
   text-align: right;
   margin-top: 6px;
-  margin-left: 584px;
 }
 
-.separated-letters {
+.letter-spacing-extended {
   letter-spacing: 60px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
 }
 
 .cover__description {
@@ -169,6 +175,7 @@ footer a {
 
 .cover__description-text,
 .bet-button {
+  font-weight: 400;
   line-height: 28px;
   /*z-index: 1;*/ /*Не понадобился*/
 }
@@ -181,8 +188,9 @@ footer a {
 .bet-button {
   padding: 10px 32px;
   background-color: transparent;
-  color: inherit;
+  font-family: Raleway, sans-serif;
   text-transform: inherit;
+  color: currentColor;
   border: 1px solid #ffffff;
 }
 
@@ -192,14 +200,20 @@ footer a {
   padding: 180px 24px;
 }
 
-.lots__heading {
+.lots__heading,
+.lots__look-more-link {
   margin-left: 40px;
+}
+
+.lots__heading {
   margin-bottom: 26px;
 }
 
 .lots__card-list {
   display: flex;
   justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
   color: #ffffff;
 }
 
@@ -210,6 +224,8 @@ footer a {
 .card {
   width: 334px;
   min-height: 563px;
+  background-size: cover;
+  background-position: center center;
   padding: 51px 40px 48px;
   display: flex;
   flex-direction: column;
@@ -218,8 +234,6 @@ footer a {
 
 .card_type_film {
   background-image: url("../images/card-lot-01.jpg");
-  background-size: cover;
-  background-position: center center;
 }
 
 .card__title {
@@ -234,14 +248,10 @@ footer a {
 
 .card_type_book {
   background-image: url("../images/card-lot-02.jpg");
-  background-size: cover;
-  background-position: center center;
 }
 
 .card_type_picture {
   background-image: url("../images/card-lot-03.jpg");
-  background-size: cover;
-  background-position: center center;
 }
 
 .lots__look-more-link {
@@ -249,7 +259,6 @@ footer a {
   line-height: 23.48px;
   text-decoration: underline;
   margin-top: 32px;
-  margin-left: 40px;
 }
 
 /*Настройки секции about*/
